@@ -148,7 +148,7 @@ function App() {
 
             {/* Status Box (Overlay on Hacker Image) */}
             <div className="border-2 border-purple-400 absolute bottom-0 md:bottom-auto md:left-1/2 md:transform md:-translate-x-1/2 w-full md:w-3/4 p-2 md:-ml-2 bg-gray-900 rounded-lg text-center z-20">
-              <p className="text-white text-base md:text-xl"><span className="text-2xl md:text-3xl text-purple-400">⏣</span> Currently working on Portfolio</p>
+              <p className="text-white text-base md:text-xl"><span className="text-2xl md:text-3xl text-purple-400">⏣</span> Currently working on Bus-Tracking</p>
             </div>
           </div>
         </div>
