@@ -67,11 +67,11 @@ function App() {
       {/* Hero Section */}
       <div className="flex flex-col md:flex-row items-center justify-center p-7 md:p-12 mt-4 md:mt-14">
         {/* Text Content */}
-        <div className="text-center md:text-left md:w-1/2 md:pl-12">
+        <div className="text-center md:text-left md:w-7/12 md:pl-14 -ml-32">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-white">Sharon is a web designer and</span>
-            <br />
-            <span className="text-purple-400">front-end developer</span>
+            <span className="text-white">Sharon is a AIML Engineer </span>
+            <br/>
+            <span className="text-purple-400">and Software Developer</span>
           </h2>
           <p className="text-gray-400 mb-6 text-xl">
             He crafts responsive websites where technologies <br />meet creativity
@@ -82,23 +82,23 @@ function App() {
         </div>
 
         {/* Image and Status Section */}
-        <div className="mt-6 md:mt-0 md:w-1/2 flex flex-col items-center relative -mr-20">
+        <div className="mt-6 md:mt-0 md:w-5/12 flex flex-col items-center relative -mr-20">
           <div className="w-full h-full max-h-[600px] relative">
             {/* Shoulder image */}
             <img
               src={shoulderImage}
               alt="Shoulder Icon"
-              className="absolute top-[140px] left-[50px] w-72 h-52 object-contain z-0"
+              className="absolute top-[140px] -left-[30px]  w-72 h-52 object-contain z-0"
             />
             {/* Hacker image */}
             <img
               src={hacker}
               alt="Sharon"
-              className="w-full h-[500px] object-contain rounded-lg relative z-10"
+              className="w-full h-[420px] object-contain rounded-lg relative z-10"
             />
 
             {/* Status Box (Overlay on Hacker Image) */}
-            <div className="border-2 border-purple-400 absolute left-1/2 transform -translate-x-1/2 w-4/6 p-2 -ml-2 bg-gray-900 rounded-lg text-center z-20">
+            <div className="border-2 border-purple-400 absolute left-1/2 transform -translate-x-1/2 w-3/4 p-2 -ml-2 bg-gray-900 rounded-lg text-center z-20">
               <p className="text-white text-xl"><span className="text-3xl text-purple-400">⏣</span> Currently working on Portfolio</p>
             </div>
           </div>
@@ -140,7 +140,7 @@ function App() {
 
               {/* Tools */}
               <div className="bg-gray-800 p-6 rounded-lg w-72">
-                <h4 className="text-purple-400 text-[28px] mb-20">Devops & Tools</h4>
+                <h4 className="text-purple-400 text-[28px] mb-10">Devops & Tools</h4>
                 <p className="text-white text-xl">Neovim Linux</p>
                 <p className="text-white text-xl">Docker Git/Github</p>
                 <p className="text-white text-xl">AWS GCP</p>
@@ -156,10 +156,10 @@ function App() {
 
               {/* Frameworks */}
               <div className="bg-gray-800 p-6 rounded-lg w-72">
-                <h4 className="text-purple-400 text-[28px] mb-20">Web Frameworks</h4>
+                <h4 className="text-purple-400 text-[28px] mb-10">Web Frameworks</h4>
                 <p className="text-white text-xl">React/Nextjs Flask</p>
                 <p className="text-white text-xl">Node/Expressjs Django</p>
-                <p className="text-white text-xl">HTML/CSS Tailwindcss</p>
+                <p className="text-white text-xl">Tailwindcss</p>
                 <p className="text-white text-xl">React-Native</p>
               </div>
 
