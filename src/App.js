@@ -49,7 +49,7 @@ function App() {
     <div className="min-h-screen bg-gray-900 text-white font-mono">
       {/* Navigation Bar */}
       <nav className="flex justify-between items-center p-4 relative">
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2">
           <span className="text-purple-400 text-2xl">⏣</span>
           <h1 className="text-xl">Sharon</h1>
         </div>
@@ -111,21 +111,21 @@ function App() {
         {/* Image and Status Section */}
         <div className="mt-6 md:mt-0 md:w-5/12 flex flex-col items-center relative -mr-20">
           <div className="w-full h-full max-h-[600px] relative">
-            {/* Shoulder image */}
+            {/* Shoulder image (hidden on mobile) */}
             <img
               src={shoulderImage}
               alt="Shoulder Icon"
-              className="absolute top-[140px] -left-[30px] w-72 h-52 object-contain z-0"
+              className="absolute top-[140px] -left-[30px] w-72 h-52 object-contain z-0 hidden md:block"
             />
-            {/* Hacker image */}
+            {/* Hacker image (hidden on mobile) */}
             <img
               src={hacker}
               alt="Sharon"
-              className="w-full h-[420px] object-contain rounded-lg relative z-10"
+              className="w-full h-[420px] object-contain rounded-lg relative z-10 hidden md:block"
             />
 
             {/* Status Box (Overlay on Hacker Image) */}
-            <div className="border-2 border-purple-400 absolute left-1/2 transform -translate-x-1/2 w-3/4 p-2 -ml-2 bg-gray-900 rounded-lg text-center z-20">
+            <div className="border-2 border-purple-400 absolute left-1/2 transform -translate-x-1/2 w-3/4 p-2 -ml-2 bg-gray-900 rounded-lg text-center z-20 hidden md:block">
               <p className="text-white text-xl"><span className="text-3xl text-purple-400">⏣</span> Currently working on Portfolio</p>
             </div>
           </div>
