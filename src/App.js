@@ -143,8 +143,8 @@ function App() {
             <span className="text-white hidden md:inline">------------------- </span>#about-me
             <span className="text-white hidden md:inline"> -------------------</span>
           </h3>
-          <h2 className="text-gray-400 text-[30px] md:text-[45px] font-bold mb-4">Hello, I'm Sharon!</h2>
-          <p className="text-gray-400 mb-6 text-sm md:text-2xl px-2 md:px-16 whitespace-pre-line">
+          <h2 className="text-gray-400 text-[27px] md:text-[45px] font-bold mb-4">Hello, I'm Sharon!</h2>
+          <p className="text-gray-400 mb-6 text-base md:text-2xl px-2 md:px-16 whitespace-pre-line">
   Sharon Adhitya S, AIML student at Chennai Institute of Technology(CGPA: 8.66/10),
   excels in AI, ML, and full-stack development. With internships at Infosys, Cisco,
   and KKR Robotics, Sharon has developed AI-driven medical image captioning models,
