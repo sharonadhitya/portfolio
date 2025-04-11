@@ -1,11 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub ,faLinkedin,faDiscord} from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
 import hacker from "./Images/Image.png";
 import shoulderImage from "./Images/Logo.png";
 
 function App() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    title: '',
+    message: ''
+  });
+  const [status, setStatus] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.send(
+      'service_s1u44rt', // Replace with your EmailJS service ID
+      'template_70dyw9g', // Replace with your EmailJS template ID
+      {
+        name: formData.name,
+        email: formData.email,
+        title: formData.title,
+        message: formData.message
+      },
+      'A_9M2XUn7GEEhju43' // Replace with your EmailJS user ID
+    )
+      .then((response) => {
+        setStatus('Message sent successfully!');
+        setFormData({ name: '', email: '', title: '', message: '' }); // Reset form
+      })
+      .catch((error) => {
+        setStatus('Failed to send message. Please try again.');
+        console.error('EmailJS error:', error);
+      });
+  };
+
   return (
     <div className="min-h-screen bg-gray-900 text-white font-mono">
       {/* Navigation Bar */}
@@ -215,32 +253,48 @@ function App() {
 
           {/* Contact Form (Right Side) */}
           <div className="w-full md:w-1/2 p-4">
-            <form className="bg-gray-800 border-2 border-white rounded-lg p-6">
+            <form onSubmit={handleSubmit} className="bg-gray-800 border-2 border-white rounded-lg p-6">
               <div className="mb-4">
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Name"
                   className="w-full bg-transparent border-b-2 border-gray-400 text-white p-2 focus:outline-none focus:border-purple-400"
+                  required
                 />
               </div>
               <div className="mb-4">
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Email"
                   className="w-full bg-transparent border-b-2 border-gray-400 text-white p-2 focus:outline-none focus:border-purple-400"
+                  required
                 />
               </div>
               <div className="mb-4">
                 <input
                   type="text"
+                  name="title"
+                  value={formData.title}
+                  onChange={handleChange}
                   placeholder="Title"
                   className="w-full bg-transparent border-b-2 border-gray-400 text-white p-2 focus:outline-none focus:border-purple-400"
+                  required
                 />
               </div>
               <div className="mb-4">
                 <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Message"
                   className="w-full bg-transparent border-b-2 border-gray-400 text-white p-2 focus:outline-none focus:border-purple-400 h-24 resize-none"
+                  required
                 />
               </div>
               <button
@@ -249,11 +303,12 @@ function App() {
               >
                 Send
               </button>
+              {status && <p className="text-green-400 mt-2">{status}</p>}
             </form>
           </div>
         </div>
       </div>
-      <hr class="w-full border-t-2 mt-40 border-gray-300"></hr>
+      <hr className="w-full border-t-2 mt-40 border-gray-300" />
 
       {/* Footer */}
       <footer className="bg-gray-900 p-4 text-center mt-10 md:text-left">
@@ -261,17 +316,26 @@ function App() {
           {/* Left Side: Name and Email */}
           <div className="mb-2 md:mb-0">
             <p className="text-gray-400">
-              <span className="text-purple-400">⏣</span> Sharon <a href="mailto:sasimanju1975@gmail.com" className="text-gray-400 hover:text-purple-400">sasimanju1975@gmail.com</a>
+              <span className="text-purple-400">⏣</span> Sharon{' '}
+              <a href="mailto:sasimanju1975@gmail.com" className="text-gray-400 hover:text-purple-400">
+                sasimanju1975@gmail.com
+              </a>
             </p>
             <p className="text-gray-400">Web designer and front-end developer</p>
           </div>
 
           {/* Right Side: Media */}
           <div className="flex space-x-2">
-            <span className="text-gray-400 text-xl -ml-40">Media <br></br></span>
-            <a href="https://github.com/sharonadhitya" className="text-gray-400 hover:text-purple-400"><FontAwesomeIcon icon={faGithub} size="2x" color="white" /></a>
-            <a href="https://www.linkedin.com/in/sharon-adhitya-34855a25a" className="text-gray-400 hover:text-purple-400"><FontAwesomeIcon icon={faLinkedin} size="2x" color="blue" /></a>
-            <a href="#ekn" className="text-gray-400 hover:text-purple-400"><FontAwesomeIcon icon={faDiscord} size="2x" color="#7289DA" /></a>
+            <span className="text-gray-400 text-xl -ml-40">Media</span>
+            <a href="https://github.com/sharonadhitya" className="text-gray-400 hover:text-purple-400">
+              <FontAwesomeIcon icon={faGithub} size="2x" color="white" />
+            </a>
+            <a href="https://www.linkedin.com/in/sharon-adhitya-34855a25a" className="text-gray-400 hover:text-purple-400">
+              <FontAwesomeIcon icon={faLinkedin} size="2x" color="blue" />
+            </a>
+            <a href="#ekn" className="text-gray-400 hover:text-purple-400">
+              <FontAwesomeIcon icon={faDiscord} size="2x" color="#7289DA" />
+            </a>
           </div>
         </div>
         <p className="text-gray-400 text-center mt-20">© Copyright 2025, Made by Sharon</p>
