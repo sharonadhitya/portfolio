@@ -49,44 +49,62 @@ function App() {
     <div className="min-h-screen bg-gray-900 text-white font-mono">
       {/* Navigation Bar */}
       <nav className="flex justify-between items-center p-4 relative">
-        <div className="flex items-center space-x-2">
-          <span className="text-purple-400 text-2xl">⏣</span>
-          <h1 className="text-xl">Sharon</h1>
-        </div>
-        {/* Hamburger Menu for Mobile */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white focus:outline-none"
-          >
-            <span className="block w-6 h-0.5 bg-white mb-1"></span>
-            <span className="block w-6 h-0.5 bg-white mb-1"></span>
-            <span className="block w-6 h-0.5 bg-white"></span>
-          </button>
-        </div>
-        {/* Navigation Links */}
-        <div
-          className={`${
-            isMenuOpen ? 'block' : 'hidden'
-          } md:flex md:space-x-12 absolute md:static top-12 right-4 md:top-auto md:right-auto bg-gray-900 md:bg-transparent p-4 md:p-0 rounded-md md:rounded-none w-40 md:w-auto z-50`}
-        >
-          <a href="#home" className="block md:inline text-2xl text-purple-400 hover:underline mb-2 md:mb-0">
-            #Home
-          </a>
-          <a href="#about-me" className="block md:inline text-2xl text-purple-400 hover:underline mb-2 md:mb-0">
-          #About-me
-          </a>
-          <a href="#works" className="block md:inline text-2xl text-purple-400 hover:underline mb-2 md:mb-0">
-            #Skills
-          </a>
-          <a href="#projects" className="block md:inline text-2xl text-purple-400 hover:underline mb-2 md:mb-0">
-            #Projects
-          </a>
-          <a href="#contacts" className="block md:inline text-2xl text-purple-400 hover:underline mb-2 md:mb-0">
-            #Contacts
-          </a>
-        </div>
-      </nav>
+  <div className="flex items-center space-x-2">
+    <span className="text-purple-400 text-2xl">⏣</span>
+    <h1 className="text-xl">Sharon</h1>
+  </div>
+
+  {/* Hamburger Menu for Mobile */}
+  <div className="md:hidden bg-gray-800 p-2 rounded">
+    <button
+      onClick={() => setIsMenuOpen(!isMenuOpen)}
+      className="text-white focus:outline-none"
+    >
+      <span className="block w-6 h-0.5 bg-white mb-1"></span>
+      <span className="block w-6 h-0.5 bg-white mb-1"></span>
+      <span className="block w-6 h-0.5 bg-white"></span>
+    </button>
+  </div>
+
+  {/* Navigation Links */}
+  <div
+    className={`${
+      isMenuOpen ? 'block' : 'hidden'
+    } md:flex md:space-x-12 absolute md:static top-12 right-4 md:top-auto md:right-auto bg-gray-900 md:bg-transparent p-4 md:p-0 rounded-md md:rounded-none w-40 md:w-auto z-50`}
+  >
+    <a
+      href="#home"
+      className="block md:inline text-lg md:text-2xl text-purple-400 hover:underline mb-2 md:mb-0"
+    >
+      #Home
+    </a>
+    <a
+      href="#about-me"
+      className="block md:inline text-lg md:text-2xl text-purple-400 hover:underline mb-2 md:mb-0"
+    >
+      #About-me
+    </a>
+    <a
+      href="#works"
+      className="block md:inline text-lg md:text-2xl text-purple-400 hover:underline mb-2 md:mb-0"
+    >
+      #Skills
+    </a>
+    <a
+      href="#projects"
+      className="block md:inline text-lg md:text-2xl text-purple-400 hover:underline mb-2 md:mb-0"
+    >
+      #Projects
+    </a>
+    <a
+      href="#contacts"
+      className="block md:inline text-lg md:text-2xl text-purple-400 hover:underline mb-2 md:mb-0"
+    >
+      #Contacts
+    </a>
+  </div>
+</nav>
+
 
       {/* Hero Section */}
       <div id="home" className="flex flex-col md:flex-row items-center justify-center p-7 md:p-12 mt-4 md:mt-14">
