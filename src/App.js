@@ -113,7 +113,7 @@ function App() {
             <img
               src={shoulderImage}
               alt="Shoulder Icon"
-              className="absolute top-[100px] sm:top-[140px] -left-[15px] sm:-left-[30px] w-52 md:w-72 h-40 md:h-52 object-contain z-0 block md:hidden"
+              className="absolute top-[60px] sm:top-[140px] -left-[20px] sm:-left-[30px] w-52 md:w-72 h-40 md:h-52 object-contain z-0 block md:hidden"
             />
             {/* Mobile shoulder image (separate for better positioning) */}
             <img
@@ -143,8 +143,8 @@ function App() {
             <span className="text-white hidden md:inline">------------------- </span>#about-me
             <span className="text-white hidden md:inline"> -------------------</span>
           </h3>
-          <h2 className="text-gray-400 text-[35px] md:text-[45px] font-bold mb-4">Hello, I'm Sharon!</h2>
-          <p className="text-gray-400 mb-6 text-xl md:text-2xl px-2 md:px-16 whitespace-pre-line">
+          <h2 className="text-gray-400 text-[30px] md:text-[45px] font-bold mb-4">Hello, I'm Sharon!</h2>
+          <p className="text-gray-400 mb-6 text-lg md:text-2xl px-2 md:px-16 whitespace-pre-line">
   Sharon Adhitya S, AIML student at Chennai Institute of Technology(CGPA: 8.66/10),
   excels in AI, ML, and full-stack development. With internships at Infosys, Cisco,
   and KKR Robotics, Sharon has developed AI-driven medical image captioning models,
@@ -286,7 +286,7 @@ function App() {
         <div className="flex flex-col md:flex-row justify-center items-start">
           {/* Contact Text (Left Side) */}
           <div className="w-full md:w-1/2 p-4 md:pr-10 mb-8 md:mt-32">
-            <p className="text-gray-400 text-xl md:text-2xl">
+            <p className="text-gray-400 text-xl md:text-2xl text-center">
               I'm interested in freelancing and company recruitment oppurtunities. However , if you any query or order request , feel free to contact me as I given my Contact-from and Mail-ID
             </p>
           </div>
@@ -365,7 +365,7 @@ function App() {
 
           {/* Right Side: Media */}
           <div className="flex flex-col md:flex-row items-center">
-            <span className="text-gray-400 text-xl mb-4 md:mb-0 md:-ml-40">Media </span>
+            <span className="text-gray-400 text-xl mb-4 md:mb-0 md:-ml-40 hidden">Media </span>
             <div className="flex space-x-4">
               <a href="https://github.com/sharonadhitya" className="text-gray-400 ml-2 hover:text-purple-400">
                 <FontAwesomeIcon icon={faGithub} size="2x" color="white" />
