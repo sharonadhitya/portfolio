@@ -14,6 +14,7 @@ function App() {
     message: ''
   });
   const [status, setStatus] = useState('');
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu toggle
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -47,21 +48,47 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-900 text-white font-mono">
       {/* Navigation Bar */}
-      <nav className="flex justify-between items-center p-4">
-        <div className="flex items-center space-x-2">
+      <nav className="flex justify-between items-center p-4 relative">
+        <div className="flex items-center space-x-4">
           <span className="text-purple-400 text-2xl">⏣</span>
           <h1 className="text-xl">Sharon</h1>
         </div>
-        <div className="flex space-x-12 text-2xl text-purple-400">
-          <a href="#home" className="hover:underline">#home</a>
-          <a href="#works" className="hover:underline">#works</a>
-          <a href="#about-me" className="hover:underline">#about-me</a>
-          <a href="#contacts" className="hover:underline">#contacts</a>
+        {/* Hamburger Menu for Mobile */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white focus:outline-none"
+          >
+            <span className="block w-6 h-0.5 bg-white mb-1"></span>
+            <span className="block w-6 h-0.5 bg-white mb-1"></span>
+            <span className="block w-6 h-0.5 bg-white"></span>
+          </button>
         </div>
-        <select className="bg-transparent border-none text-2xl text-purple-400">
-          <option value="EN" className="bg-gray-900">EN</option>
-          {/* Add more language options if needed */}
-        </select>
+        {/* Navigation Links */}
+        <div
+          className={`${
+            isMenuOpen ? 'block' : 'hidden'
+          } md:flex md:space-x-12 absolute md:static top-12 right-4 md:top-auto md:right-auto bg-gray-900 md:bg-transparent p-4 md:p-0 rounded-md md:rounded-none w-40 md:w-auto`}
+        >
+          <a href="#home" className="block md:inline text-2xl text-purple-400 hover:underline mb-2 md:mb-0">
+            #home
+          </a>
+          <a href="#works" className="block md:inline text-2xl text-purple-400 hover:underline mb-2 md:mb-0">
+            #works
+          </a>
+          <a href="#about-me" className="block md:inline text-2xl text-purple-400 hover:underline mb-2 md:mb-0">
+            #about-me
+          </a>
+          <a href="#contacts" className="block md:inline text-2xl text-purple-400 hover:underline mb-2 md:mb-0">
+            #contacts
+          </a>
+          <select className="bg-transparent border-none text-2xl text-purple-400 mt-2 md:mt-0">
+            <option value="EN" className="bg-gray-900">
+              EN
+            </option>
+            {/* Add more language options if needed */}
+          </select>
+        </div>
       </nav>
 
       {/* Hero Section */}
@@ -70,7 +97,7 @@ function App() {
         <div className="text-center md:text-left md:w-7/12 md:pl-14 -ml-32">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-white">Sharon is a AIML Engineer </span>
-            <br/>
+            <br />
             <span className="text-purple-400">and Software Developer</span>
           </h2>
           <p className="text-gray-400 mb-6 text-xl">
@@ -88,7 +115,7 @@ function App() {
             <img
               src={shoulderImage}
               alt="Shoulder Icon"
-              className="absolute top-[140px] -left-[30px]  w-72 h-52 object-contain z-0"
+              className="absolute top-[140px] -left-[30px] w-72 h-52 object-contain z-0"
             />
             {/* Hacker image */}
             <img
