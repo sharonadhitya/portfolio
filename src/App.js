@@ -101,9 +101,9 @@ function App() {
           AI-driven coder, adept at full-stack 
           <br className="hidden md:block" /> and competitive programming
           </p>
-          <button className="bg-transparent border-2 border-purple-400 text-purple-400 px-4 py-2 hover:bg-purple-400 hover:text-white transition">
+          <a href='#contacts' className="bg-transparent border-2 border-purple-400 text-purple-400 px-4 py-2 hover:bg-purple-400 hover:text-white transition">
             Contact me!!
-          </button>
+          </a>
         </div>
 
         {/* Image and Status Section - Modified for mobile visibility */}
