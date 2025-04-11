@@ -94,7 +94,7 @@ function App() {
       {/* Hero Section */}
       <div className="flex flex-col md:flex-row items-center justify-center p-7 md:p-12 mt-4 md:mt-14">
         {/* Text Content */}
-        <div className="text-center md:text-left md:w-7/12 md:pl-14 -ml-32">
+        <div className="text-center md:text-left w-full md:w-7/12 pl-0 md:pl-14">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-white">Sharon is a AIML Engineer </span>
             <br />
@@ -135,10 +135,11 @@ function App() {
       {/* About Me Section */}
       <div className="p-7 mt-40 md:p-12">
         <div className="text-center">
-          <h3 className="text-purple-400 text-[43px] -ml-16 mb-10">
-            <span className="text-white">------------------- </span>#about-me<span className="text-white"> -------------------</span>
+          <h3 className="text-purple-400 text-[43px] mb-10">
+            <span className="text-white hidden md:inline">------------------- </span>#about-me
+            <span className="text-white hidden md:inline"> -------------------</span>
           </h3>
-          <h2 className="text-gray-400 text-[45px] md:text-[30px] font-bold mb-4 -ml-14">Hello, I’m Sharon!</h2>
+          <h2 className="text-gray-400 text-[45px] md:text-[30px] font-bold mb-4">Hello, I’m Sharon!</h2>
           <p className="text-gray-400 mb-6 text-2xl">
             I’m a self-taught front-end developer based in Kyiv, Ukraine. <br />I can develop responsive websites from scratch and raise them into
             modern user-friendly <br /> web experiences.Transforming my creativity and knowledge into websites has been my passion for over a year.<br /> I have been helping various clients to establish their presence online. I always strive <br /> to learn about the newest technologies and frameworks.web experiences.Transforming my creativity <br /> and knowledge into websites has been my <br /> sdhb passion for over a year.
@@ -152,8 +153,9 @@ function App() {
       {/* Skills Section */}
       <div className="p-7 mt-40 md:p-12">
         <div className="text-center">
-          <h3 className="text-purple-400 text-[43px] -ml-16 mb-28">
-            <span className="text-white">------------------- </span>#skills<span className="text-white"> -------------------</span>
+          <h3 className="text-purple-400 text-[43px] mb-28">
+            <span className="text-white hidden md:inline">------------------- </span>#skills
+            <span className="text-white hidden md:inline"> -------------------</span>
           </h3>
           <div className="px-5 md:px-20">
             <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
@@ -204,8 +206,9 @@ function App() {
       {/* Projects Section */}
       <div className="p-7 mt-56 md:p-12">
         <div className="text-center">
-          <h3 className="text-purple-400 text-[43px] -ml-16 mb-32">
-            <span className="text-white">------------------- </span>#Projects<span className="text-white"> -------------------</span>
+          <h3 className="text-purple-400 text-[43px] mb-32">
+            <span className="text-white hidden md:inline">------------------- </span>#Projects
+            <span className="text-white hidden md:inline"> -------------------</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* CherrtNodes */}
@@ -265,8 +268,9 @@ function App() {
       {/* Contact Section */}
       <div className="p-7 mt-56 md:p-12">
         <div className="text-center mb-32">
-          <h3 className="text-purple-400 text-[43px] -ml-16">
-            <span className="text-white">------------------- </span>#Contact<span className="text-white"> -------------------</span>
+          <h3 className="text-purple-400 text-[43px] mb-32">
+            <span className="text-white hidden md:inline">------------------- </span>#Contact
+            <span className="text-white hidden md:inline"> -------------------</span>
           </h3>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-start">
