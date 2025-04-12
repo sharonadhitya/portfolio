@@ -49,61 +49,60 @@ function App() {
     <div className="min-h-screen bg-gray-900 text-white font-mono">
       {/* Navigation Bar */}
       <nav className="flex justify-between items-center p-4 relative">
-  <div className="flex items-center space-x-2">
-    <span className="text-purple-400 text-2xl">⏣</span>
-    <h1 className="text-xl">Sharon</h1>
-  </div>
+        <div className="flex items-center space-x-2">
+          <span className="text-purple-400 text-2xl">⏣</span>
+          <h1 className="text-xl">Sharon</h1>
+        </div>
 
-  {/* Hamburger Menu for Mobile */}
-  <div className="md:hidden bg-gray-800 p-2 rounded">
-    <button
-      onClick={() => setIsMenuOpen(!isMenuOpen)}
-      className="text-white focus:outline-none"
-    >
-      <span className="block w-6 h-0.5 bg-white mb-1"></span>
-      <span className="block w-6 h-0.5 bg-white mb-1"></span>
-      <span className="block w-6 h-0.5 bg-white"></span>
-    </button>
-  </div>
+        {/* Hamburger Menu for Mobile */}
+        <div className="md:hidden bg-gray-800 p-2 rounded">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white focus:outline-none"
+          >
+            <span className="block w-6 h-0.5 bg-white mb-1"></span>
+            <span className="block w-6 h-0.5 bg-white mb-1"></span>
+            <span className="block w-6 h-0.5 bg-white"></span>
+          </button>
+        </div>
 
-  {/* Navigation Links */}
-  <div
-    className={`${
-      isMenuOpen ? 'block' : 'hidden'
-    } md:flex md:space-x-12 absolute md:static top-12 right-4 md:top-auto md:right-auto bg-gray-900 md:bg-transparent p-4 md:p-0 rounded-md md:rounded-none w-40 md:w-auto z-50`}
-  >
-    <a
-      href="#home"
-      className="block md:inline text-lg md:text-2xl text-purple-400 hover:underline mb-2 md:mb-0"
-    >
-      #Home
-    </a>
-    <a
-      href="#about-me"
-      className="block md:inline text-lg md:text-2xl text-purple-400 hover:underline mb-2 md:mb-0"
-    >
-      #About-me
-    </a>
-    <a
-      href="#works"
-      className="block md:inline text-lg md:text-2xl text-purple-400 hover:underline mb-2 md:mb-0"
-    >
-      #Skills
-    </a>
-    <a
-      href="#projects"
-      className="block md:inline text-lg md:text-2xl text-purple-400 hover:underline mb-2 md:mb-0"
-    >
-      #Projects
-    </a>
-    <a
-      href="#contacts"
-      className="block md:inline text-lg md:text-2xl text-purple-400 hover:underline mb-2 md:mb-0"
-    >
-      #Contacts
-    </a>
-  </div>
-</nav>
+        {/* Navigation Links */}
+        <div
+          className={`${isMenuOpen ? 'block' : 'hidden'
+            } md:flex md:space-x-12 absolute md:static top-12 right-4 md:top-auto md:right-auto bg-gray-900 md:bg-transparent p-4 md:p-0 rounded-md md:rounded-none w-40 md:w-auto z-50`}
+        >
+          <a
+            href="#home"
+            className="block md:inline text-lg md:text-2xl text-purple-400 hover:underline mb-2 md:mb-0"
+          >
+            #Home
+          </a>
+          <a
+            href="#about-me"
+            className="block md:inline text-lg md:text-2xl text-purple-400 hover:underline mb-2 md:mb-0"
+          >
+            #About-me
+          </a>
+          <a
+            href="#works"
+            className="block md:inline text-lg md:text-2xl text-purple-400 hover:underline mb-2 md:mb-0"
+          >
+            #Skills
+          </a>
+          <a
+            href="#projects"
+            className="block md:inline text-lg md:text-2xl text-purple-400 hover:underline mb-2 md:mb-0"
+          >
+            #Projects
+          </a>
+          <a
+            href="#contacts"
+            className="block md:inline text-lg md:text-2xl text-purple-400 hover:underline mb-2 md:mb-0"
+          >
+            #Contacts
+          </a>
+        </div>
+      </nav>
 
 
       {/* Hero Section */}
@@ -112,12 +111,12 @@ function App() {
         <div className="text-center md:text-left w-full md:w-7/12 pl-0 md:pl-14">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-white">Sharon is a AIML Engineer </span>
-            <br className="hidden md:block" /> 
+            <br className="hidden md:block" />
             <span className="text-purple-400">and Software Developer</span>
           </h2>
           <p className="text-gray-400 mb-6 text-xl">
-          AI-driven coder, adept at full-stack 
-          <br className="hidden md:block" /> and competitive programming
+            AI-driven coder, adept at full-stack
+            <br className="hidden md:block" /> and competitive programming
           </p>
           <a href='#contacts' className="bg-transparent border-2 border-purple-400 text-purple-400 px-4 py-2 hover:bg-purple-400 hover:text-white transition">
             Contact me!!
@@ -157,20 +156,21 @@ function App() {
       {/* About Me Section */}
       <div id="about-me" className="p-7 mt-20 sm:mt-40 md:p-12">
         <div className="text-center">
-          <h3 className="text-purple-400 text-[32px] md:text-[43px] mb-10">
-            <span className="text-white hidden md:inline">------------------- </span>#about-me
-            <span className="text-white hidden md:inline"> -------------------</span>
+          <h3 className="text-purple-400 text-[32px] md:text-[43px] mb-16 md:mb-28 flex items-center justify-center">
+            <div className="hidden md:block w-1/3 border-t-4 border-white mx-4"></div>
+            #About-me
+            <div className="hidden md:block w-1/3 border-t-4 border-white mx-4"></div>
           </h3>
           <h2 className="text-gray-400 text-[27px] md:text-[45px] font-bold mb-4">Hello, I'm Sharon!</h2>
           <p className="text-gray-400 mb-6 text-base md:text-2xl px-2 md:px-16 whitespace-pre-line">
-  Sharon Adhitya S, AIML student at Chennai Institute of Technology(CGPA: 8.66/10),
-  excels in AI, ML, and full-stack development. With internships at Infosys, Cisco,
-  and KKR Robotics, Sharon has developed AI-driven medical image captioning models,
-  network simulations, and e-commerce websites. Notable projects include a
-  cold-email generator, water reservoir management system, and admin dashboard,
-  boosting efficiency by up to 40%. A competitive programmer with Leetcode and
-  Codechef accolades, Sharon is skilled in Python, JavaScript, React, and more.
-</p>
+            Sharon Adhitya S, AIML student at Chennai Institute of Technology(CGPA: 8.66/10),
+            excels in AI, ML, and full-stack development. With internships at Infosys, Cisco,
+            and KKR Robotics, Sharon has developed AI-driven medical image captioning models,
+            network simulations, and e-commerce websites. Notable projects include a
+            cold-email generator, water reservoir management system, and admin dashboard,
+            boosting efficiency by up to 40%. A competitive programmer with Leetcode and
+            Codechef accolades, Sharon is skilled in Python, JavaScript, React, and more.
+          </p>
 
           <a href="https://drive.google.com/file/d/176G6mKjw6OjH6sQJXlFNR7ZidCMTQLxe/view?usp=sharing" className="bg-transparent border-2 border-purple-400 text-purple-400 text-xl  mt-6 px-6 py-2 hover:bg-purple-400 hover:text-white transition">
             Read more →
@@ -181,10 +181,12 @@ function App() {
       {/* Skills Section */}
       <div id="works" className="p-7 mt-20 sm:mt-40 md:p-12">
         <div className="text-center">
-          <h3 className="text-purple-400 text-[32px] md:text-[43px] mb-16 md:mb-28">
-            <span className="text-white hidden md:inline">------------------- </span>#skills
-            <span className="text-white hidden md:inline"> -------------------</span>
+          <h3 className="text-purple-400 text-[32px] md:text-[43px] mb-16 md:mb-28 flex items-center justify-center">
+            <div className="hidden md:block w-1/3 border-t-4 border-white mx-4"></div>
+            #Skills
+            <div className="hidden md:block w-1/3 border-t-4 border-white mx-4"></div>
           </h3>
+
           <div className="px-0 sm:px-5 md:px-20">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
               {/* Languages */}
@@ -234,9 +236,10 @@ function App() {
       {/* Projects Section */}
       <div id="projects" className="p-7 mt-32 md:mt-56 md:p-12">
         <div className="text-center">
-          <h3 className="text-purple-400 text-[32px] md:text-[43px] mb-16 md:mb-32">
-            <span className="text-white hidden md:inline">------------------- </span>#Projects
-            <span className="text-white hidden md:inline"> -------------------</span>
+          <h3 className="text-purple-400 text-[32px] md:text-[43px] mb-16 md:mb-28 flex items-center justify-center">
+            <div className="hidden md:block w-1/3 border-t-4 border-white mx-4"></div>
+            #Projects
+            <div className="hidden md:block w-1/3 border-t-4 border-white mx-4"></div>
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {/* Cold-email */}
@@ -296,9 +299,10 @@ function App() {
       {/* Contact Section */}
       <div id="contacts" className="p-7 mt-32 md:mt-56 md:p-12">
         <div className="text-center mb-16 md:mb-32">
-          <h3 className="text-purple-400 text-[32px] md:text-[43px] mb-10 md:mb-10">
-            <span className="text-white hidden md:inline">------------------- </span>#Contact
-            <span className="text-white hidden md:inline"> -------------------</span>
+          <h3 className="text-purple-400 text-[32px] md:text-[43px] mb-16 md:mb-28 flex items-center justify-center">
+            <div className="hidden md:block w-1/3 border-t-4 border-white mx-4"></div>
+            #Contact
+            <div className="hidden md:block w-1/3 border-t-4 border-white mx-4"></div>
           </h3>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-start">
