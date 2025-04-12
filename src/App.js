@@ -309,7 +309,8 @@ function App() {
           {/* Contact Text (Left Side) */}
           <div className="w-full md:w-1/2 p-4 md:pr-10 mb-8 md:mt-32">
             <p className="text-gray-400 text-xl md:text-2xl text-center">
-              I'm interested in freelancing and company recruitment oppurtunities. However , if you any query or order request , feel free to contact me as I given my Contact-from and Mail-ID
+              I'm interested in freelancing and company recruitment oppurtunities. However , if you have any query or order request ,
+               feel free to contact me as I given Contact-form and Mail-ID
             </p>
           </div>
 
