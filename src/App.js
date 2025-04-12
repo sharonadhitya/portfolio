@@ -269,6 +269,7 @@ function App() {
               <p className="text-gray-400 text-xl mb-2">Reservoir management and prediction using ml</p>
               <p className="text-gray-400 text-lg mb-2">React Django LSTM GCP</p>
               <div className="flex space-x-2">
+              <a href="https://water-dashboard-deploy.vercel.app/waterforecast/" className="bg-transparent border-2 border-purple-400 text-purple-400 px-2 py-1 text-xs hover:bg-purple-400 hover:text-white transition">Live ↗</a>
                 <a href="https://github.com/Lokeshzz7/Water_Frontend_Andhra.git" className="bg-transparent border-2 border-purple-400 text-purple-400 px-2 py-1 text-xs hover:bg-purple-400 hover:text-white transition">Github ↗</a>
               </div>
             </div>
